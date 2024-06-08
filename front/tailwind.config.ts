@@ -17,7 +17,7 @@ const config: Config = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["[data-theme=light]"],
-          primary: "#e5b4ed",
+          primary: "#07cad7",
           secondary: "#ff781f",
           success: "#4caf50",
           warning: "#e6a23b",
