@@ -6,6 +6,7 @@ import { Search } from "./search";
 
 const DatesPage: React.FC = () => {
   const data = use(getData());
+  console.log(data);
 
   return (
     <main className="px-6 py-8">

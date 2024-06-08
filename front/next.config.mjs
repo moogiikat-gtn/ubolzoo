@@ -26,7 +26,6 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.myspicyvanilla.com",
       },
-      
     ],
   },
 };
