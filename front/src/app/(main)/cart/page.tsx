@@ -1,4 +1,5 @@
 import { use } from "react";
+import Image from "next/image";
 
 import { getData } from "@/services/redis/getData";
 
@@ -13,8 +14,10 @@ export default function Orders() {
         <h2 className="text-3xl sm:text-5xl font-bold">Your order</h2>
       </div>
       <Locations locations={data.filter((item) => item.category === "order")} />
-      <div className="flex justify-end">
+      <div className="flex justify-end gap-x-2">
         <button className="btn btn-primary text-white">Payment</button>
+        <Image src="/assets/images/qpay.png" alt="credit card" width={50} height={50} />
+        <Image src="/assets/images/khan.png" alt="credit card" width={50} height={50} />
       </div>
     </div>
   );

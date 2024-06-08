@@ -16,10 +16,11 @@ export const Header: React.FC = () => {
     }
   }, []);
 
-  const handleLogout = () => {
+  const handleLogout = (event: any) => {
+    event.preventDefault(); // Prevent the default form submission
     localStorage.removeItem("user");
-    router.push("/login");
     router.refresh();
+    router.push("/login");
   };
 
   return (
@@ -56,11 +57,9 @@ export const Header: React.FC = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">
-          <Link href="/">
-            <Logo />
-          </Link>
-        </a>
+        <Link href="/" className="btn btn-ghost text-xl">
+          <Logo />
+        </Link>
       </div>
       <div className="navbar-end gap-x-2">
         <button className="btn btn-ghost btn-circle">
