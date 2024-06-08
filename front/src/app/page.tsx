@@ -10,17 +10,19 @@ import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { News } from "./components/news/news";
 import { Login } from "./components/login";
+import { Footer } from "./components/footer";
 
 export default function Home() {
   const news = use(getNews());
   const data = use(getData());
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <Hero />
       <News news={news} />
       {/* <Login /> */}
       <Dates data={data.slice(0, 6)} />
+      <Footer />
     </main>
   );
 }
