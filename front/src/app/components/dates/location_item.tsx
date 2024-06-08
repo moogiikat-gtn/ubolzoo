@@ -10,7 +10,7 @@ export const LocationItem: React.FC<Props> = ({ data }) => {
     <div className="card bg-base-100 shadow-xl">
       <figure className="relative h-[250px]">
         <Image
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+          src={data.img ?? "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"}
           alt="Shoes"
           fill
         />

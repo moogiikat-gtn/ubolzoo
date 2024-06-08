@@ -17,7 +17,7 @@ export const NewsItem: React.FC<Props> = ({ news, index, newsLength }) => {
       <Image
         alt="Image"
         fill
-        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        src="https://nomadicjourneys.com.au/wp-content/uploads/2018/05/ulaanbaatar.jpg"
         className="w-full"
       />
       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
