@@ -18,6 +18,7 @@ export const DatesCategoryFilter: React.FC = () => {
     { label: "Libraries", value: "libraries" },
     { label: "National parks", value: "national_parks" },
     { label: "Plan", value: "set" },
+    { label: "Event", value: "event" },
   ];
 
   const onChange = (event: ChangeEvent<HTMLSelectElement>) => {
