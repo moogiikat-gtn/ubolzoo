@@ -42,6 +42,10 @@ export const LocationItem: React.FC<Props> = ({ data, comments }) => {
           {data.title}
           {data.isNew && <div className="badge badge-secondary">NEW</div>}
         </h2>
+        <div className="flex justify-between">
+          <span className="text-gray-600">{data.price}$</span>
+          <span className="text-gray-600">{data.date.toDateString()}</span>
+        </div>
         <p>{data.description}</p>
         <div className="card-actions justify-end">
           <div className="badge badge-outline">{data.category}</div>
