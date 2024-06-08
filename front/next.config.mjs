@@ -16,6 +16,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "www.toursmongolia.com",
+      },
+      {
+        protocol: "https",
         hostname: "example.com",
       },
     ],

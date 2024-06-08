@@ -16,20 +16,16 @@ export const Header: React.FC = () => {
   }, []);
 
   const handleLogout = () => {
-      localStorage.removeItem("user");
-      router.push("/login");
-      router.refresh();
+    localStorage.removeItem("user");
+    router.push("/login");
+    router.refresh();
   };
 
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle"
-          >
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -50,18 +46,21 @@ export const Header: React.FC = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a href="/news">News</a>
+              <Link href="/news">News</Link>
             </li>
             <li>
-              <a href="/plans">Plans</a>
+              <Link href="/plans">Plans</Link>
+            </li>
+            <li>
+              <Link href="/dates">Dates</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">
+        <Link className="btn btn-ghost text-xl" href="/">
           <Logo />
-        </a>
+        </Link>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">

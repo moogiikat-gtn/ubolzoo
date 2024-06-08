@@ -1,7 +1,7 @@
-import NextAuth from 'next-auth';
-import { NextAuthOptions } from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
-import {redisClient} from '../../../services/redis/redis_client';
+import NextAuth from "next-auth";
+import { NextAuthOptions } from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
+import { redisClient } from "../../../services/redis/redis_client";
 
 export const authOptions: NextAuthOptions = {
   providers: [
