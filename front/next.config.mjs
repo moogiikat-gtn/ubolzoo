@@ -4,29 +4,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "img.daisyui.com",
+        hostname: "**",
       },
-      {
-        protocol: "https",
-        hostname: "nomadicjourneys.com.au",
-      },
-      {
-        protocol: "https",
-        hostname: "mediaim.expedia.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.toursmongolia.com",
-      },
-      {
-        protocol: "https",
-        hostname: "example.com",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.myspicyvanilla.com",
-      },
-      
     ],
   },
 };
