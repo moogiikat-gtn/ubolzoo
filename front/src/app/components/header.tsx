@@ -59,11 +59,9 @@ export const Header: React.FC = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">
-          <Link href="/">
-            <Logo />
-          </Link>
-        </a>
+        <Link href="/">
+          <Logo />
+        </Link>
       </div>
       <div className="navbar-end gap-x-2">
         <button className="btn btn-ghost btn-circle">

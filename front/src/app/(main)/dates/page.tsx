@@ -1,7 +1,6 @@
 import { getData } from "@/services/redis/getData";
-import Image from "next/image";
 import { use } from "react";
-import { DateItem } from "./date_item";
+
 import { Dates } from "./dates";
 import { Search } from "./search";
 
