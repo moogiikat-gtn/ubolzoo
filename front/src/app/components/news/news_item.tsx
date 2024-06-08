@@ -23,17 +23,19 @@ export const NewsItem: React.FC<Props> = ({ news, index, newsLength }) => {
       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a
           href={index === 0 ? `#slide${newsLength - 1}` : `#slide${index - 1}`}
-          className="btn btn-circle"
+          className="btn btn-circle text-white"
         >
           ❮
         </a>
         <div className="w-full">
-          <h3 className="sm:text-6xl text-2xl font-bold">{news.title}</h3>
-          <p className="sm:text-2xl text-lg">{news.description}</p>
+          <h3 className="sm:text-6xl text-2xl font-bold text-white">
+            {news.title}
+          </h3>
+          <p className="sm:text-2xl text-lg text-white">{news.description}</p>
         </div>
         <a
           href={index === newsLength - 1 ? "#slide0" : `#slide${index + 1}`}
-          className="btn btn-circle"
+          className="btn btn-circle text-white"
         >
           ❯
         </a>
