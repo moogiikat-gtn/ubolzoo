@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Invitation } from "./invitation";
 
 const OrdersPage: React.FC = () => {
   return (
@@ -19,9 +20,7 @@ const OrdersPage: React.FC = () => {
             emperor. Offers cultural insights and a beautiful setting.
           </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-secondary text-white">
-              Invite someone
-            </button>
+            <Invitation />
             <button className="btn btn-primary text-white">Purchase</button>
           </div>
         </div>
