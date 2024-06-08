@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ShoppingCartIcon } from "lucide-react";
 
 export const Header: React.FC = () => {
   const router = useRouter();
@@ -19,12 +20,16 @@ export const Header: React.FC = () => {
     localStorage.removeItem("user");
     router.push("/login");
     router.refresh();
+    localStorage.removeItem("user");
+    router.push("/login");
+    router.refresh();
   };
 
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +67,7 @@ export const Header: React.FC = () => {
           <Logo />
         </Link>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end gap-x-2">
         <button className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +83,9 @@ export const Header: React.FC = () => {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+          
         </button>
+        <ShoppingCartIcon size={24} />
         {isUserLoggedIn ? (
           <div className="flex gap-x-2">
             <Link href="/mypage">
