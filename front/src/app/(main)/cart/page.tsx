@@ -4,7 +4,7 @@ import { getData } from "@/services/redis/getData";
 
 import { Locations } from "../../components/dates/locations";
 
-export const Dates: React.FC = () => {
+export const DatesPage: React.FC = () => {
   const data = use(getData());
   return (
     <div className="px-8 flex flex-col sm:gap-y-8 gap-y-6 text-slate-700 py-6">
@@ -20,4 +20,4 @@ export const Dates: React.FC = () => {
   );
 };
 
-export default Dates;
+export default DatesPage;
