@@ -53,6 +53,9 @@ export const Header: React.FC = () => {
             <li>
               <a href="/plans">Plans</a>
             </li>
+            <li>
+              <a href="/dates">Dates</a>
+            </li>
           </ul>
         </div>
       </div>
