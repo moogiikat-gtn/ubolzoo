@@ -28,8 +28,8 @@ export const NewsItem: React.FC<Props> = ({ news, index, newsLength }) => {
           ❮
         </a>
         <div className="w-full">
-          <h3 className="text-6xl font-bold">{news.title}</h3>
-          <p className="text-2xl">{news.description}</p>
+          <h3 className="sm:text-6xl text-2xl font-bold">{news.title}</h3>
+          <p className="sm:text-2xl text-lg">{news.description}</p>
         </div>
         <a
           href={index === newsLength - 1 ? "#slide0" : `#slide${index + 1}`}
