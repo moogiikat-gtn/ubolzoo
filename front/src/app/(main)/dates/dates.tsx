@@ -9,7 +9,7 @@ type Props = {
 export const Dates: React.FC<Props> = ({ data }) => {
   const { searchQuery } = useSearchQuery();
   console.log(searchQuery.category);
-  let filteredData = data;
+  let filteredData = data.filter((item) => item.category !== "set");
 
   if (searchQuery?.category)
     filteredData = data.filter(
