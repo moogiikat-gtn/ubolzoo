@@ -5,10 +5,11 @@ import { useRouter } from "next/navigation";
 export default function Example() {
   const router = useRouter();
 
-  const handleSignIn = () => {
-      localStorage.setItem("user", "true");
-      router.push("/mypage");
-      router.refresh();
+  const handleSignIn = (event: any) => {
+    event.preventDefault(); // Prevent the default form submission
+    localStorage.setItem("user", "true");
+    router.refresh();
+    router.push("/mypage");
   };
 
   return (
@@ -21,7 +22,7 @@ export default function Example() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" onSubmit={handleSignIn}>
             <div>
               <label
                 htmlFor="email"
@@ -45,7 +46,6 @@ export default function Example() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  defaultValue={"password"}
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Password
@@ -74,7 +74,6 @@ export default function Example() {
             <div>
               <button
                 type="submit"
-                onClick={handleSignIn}
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
