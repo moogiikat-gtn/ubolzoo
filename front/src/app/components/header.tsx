@@ -19,8 +19,10 @@ export const Header: React.FC = () => {
   const handleLogout = (event: any) => {
     event.preventDefault(); // Prevent the default form submission
     localStorage.removeItem("user");
-    router.refresh();
     router.push("/login");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (

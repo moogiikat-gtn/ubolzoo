@@ -8,8 +8,10 @@ export default function Example() {
   const handleSignIn = (event: any) => {
     event.preventDefault(); // Prevent the default form submission
     localStorage.setItem("user", "true");
-    router.refresh();
     router.push("/mypage");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (
