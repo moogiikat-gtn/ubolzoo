@@ -80,7 +80,9 @@ export const Header: React.FC = () => {
             />
           </svg>
         </button>
-        <ShoppingCartIcon size={24} />
+        <Link href="/cart">
+          <ShoppingCartIcon size={24} />
+        </Link>
         {isUserLoggedIn ? (
           <div className="flex gap-x-2">
             <Link href="/mypage">
