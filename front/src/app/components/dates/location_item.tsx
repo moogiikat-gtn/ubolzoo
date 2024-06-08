@@ -32,12 +32,14 @@ export const LocationItem: React.FC<Props> = ({ data, comments }) => {
           <div className="badge badge-outline">{data.category}</div>
         </div>
       </div>
-      <div className="card-body -mt-8">
-        <h3>Comments:</h3>
-        {comments.map((comment) => (
-          <Comment key={comment.author} data={comment} />
-        ))}
-      </div>
+      {comments.length > 0 && (
+        <div className="card-body -mt-8">
+          <h3>Comments:</h3>
+          {comments.map((comment) => (
+            <Comment key={comment.author} data={comment} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

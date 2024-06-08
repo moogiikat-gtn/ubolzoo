@@ -12,7 +12,7 @@ export const Dates: React.FC<Props> = ({ data }) => {
         <p className="text-[#15aabf]">Need a date idea?</p>
         <h2 className="text-3xl sm:text-5xl font-bold">Locations</h2>
       </div>
-      <Locations locations={data} />
+      <Locations locations={data} comment />
     </div>
   );
 };
