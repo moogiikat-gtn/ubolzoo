@@ -1,15 +1,17 @@
-// import { array, safeParse, any } from "valibot";
-// import { redisClient } from "./redis_client";
-// import { NewsSchema } from "@/app/schemas/product";
+import { array, safeParse, any } from "valibot";
+import { redisClient } from "./redis_client";
+import { NewsSchema } from "@/app/schemas/news";
 
-// export const getNews = async () => {
-//   const response = await redisClient.json.get("news");
+export const getNews = async () => {
 
-//   const parsedData = safeParse(array(NewsSchema), response);
+//   await redisClient.json.set("news", "$", []);
+  const response = await redisClient.json.get("news");
 
-//   if (!parsedData.success) {
-//     throw Error("INVALID_REDIS_DATA");
-//   }
+  const parsedData = safeParse(array(NewsSchema), response);
 
-//   return parsedData.output;
-// };
+  if (!parsedData.success) {
+    throw Error("INVALID_REDIS_DATA");
+  }
+
+  return parsedData.output;
+};
