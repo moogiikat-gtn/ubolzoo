@@ -1,17 +1,32 @@
+"use client";
 import Image from "next/image";
 
 import type { DataSchema } from "@/app/schemas/data";
 import { CommentSchema } from "@/app/schemas/comment";
 
 import { Comment } from "./comment";
+import { useRouter } from "next/navigation";
 
 type Props = {
   data: DataSchema;
   comments: CommentSchema[];
 };
 export const LocationItem: React.FC<Props> = ({ data, comments }) => {
+  const router = useRouter();
+
+  const onClick = () => {
+    if (data.category === "order") {
+      router.push("/orders");
+    } else return;
+  };
+
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div
+      className={`card bg-base-100 shadow-xl ${
+        data.category === "order" ? "cursor-pointer" : ""
+      }`}
+      onClick={onClick}
+    >
       <figure className="relative h-[250px]">
         <Image
           src={
