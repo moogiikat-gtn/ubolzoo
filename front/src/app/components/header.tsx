@@ -20,16 +20,12 @@ export const Header: React.FC = () => {
     localStorage.removeItem("user");
     router.push("/login");
     router.refresh();
-    localStorage.removeItem("user");
-    router.push("/login");
-    router.refresh();
   };
 
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,21 +47,23 @@ export const Header: React.FC = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link href="/news">News</Link>
+              <a href="/news">News</a>
             </li>
             <li>
-              <Link href="/plans">Plans</Link>
+              <a href="/plans">Plans</a>
             </li>
             <li>
-              <Link href="/dates">Dates</Link>
+              <a href="/dates">Dates</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <Link className="btn btn-ghost text-xl" href="/">
-          <Logo />
-        </Link>
+        <a className="btn btn-ghost text-xl">
+          <Link href="/">
+            <Logo />
+          </Link>
+        </a>
       </div>
       <div className="navbar-end gap-x-2">
         <button className="btn btn-ghost btn-circle">
@@ -83,7 +81,6 @@ export const Header: React.FC = () => {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-          
         </button>
         <ShoppingCartIcon size={24} />
         {isUserLoggedIn ? (
