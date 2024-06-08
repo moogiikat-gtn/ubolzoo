@@ -8,7 +8,7 @@ type Props = {
 };
 export const Dates: React.FC<Props> = ({ data }) => {
   const { searchQuery } = useSearchQuery();
-  let filteredData = data.filter((item) => item.category !== "set");
+  let filteredData = data;
 
   if (searchQuery?.category)
     filteredData = data.filter(
