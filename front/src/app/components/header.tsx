@@ -63,6 +63,9 @@ export const Header: React.FC = () => {
               />
             </svg>
           </button>
+          <Link href="/login">
+            <button className="btn">Login</button>
+          </Link>
         </div>
       </div>
     );

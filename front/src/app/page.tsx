@@ -8,6 +8,7 @@ import { getData } from "@/services/redis/getData";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { News } from "./components/news/news";
+import { Login } from "./components/login";
 
 export default function Home() {
   const news = use(getNews());
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <Hero />
       <News news={news} />
+      {/* <Login /> */}
     </main>
   );
 }
